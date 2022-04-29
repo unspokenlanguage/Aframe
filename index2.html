@@ -20,14 +20,14 @@
         vr-mode-ui="enabled: false"
 		embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-        <a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="10 10 10" gps-entity-place="longitude: 39.127929; latitude: -77.242734;" animation-mixer/>
+        <a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="1 1 1" gps-entity-place="longitude: 39.127929; latitude: -77.242734;" animation-mixer/>
         <a-camera gps-camera rotation-reader></a-camera>
 	</a-scene>
-    <script>
+    <!-- <script>
         // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
         const sceneEl = document.querySelector('a-scene');
         sceneEl.addEventListener('loaded', () => {
           sceneEl.camera = new THREE.PerspectiveCamera();
         });
-      </script>
+      </script> -->
 </body>
