@@ -27,7 +27,7 @@
                     look-at="[gps-camera]"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
-                    scale="1 1 1"
+                    scale="7 7 7"
                     gps-entity-place="latitude: 39.128080; longitude: -77.243181;"
                 ></a-entity>
 
@@ -35,10 +35,10 @@
         </a-scene>
         <script>
             // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
-            // const sceneEl = document.querySelector('a-scene');
-            // sceneEl.addEventListener('loaded', () => {
-            //   sceneEl.camera = new THREE.PerspectiveCamera();
-            // });
+            const sceneEl = document.querySelector('a-scene');
+            sceneEl.addEventListener('loaded', () => {
+              sceneEl.camera = new THREE.PerspectiveCamera();
+            });
           </script>
     </body>
 </html>
