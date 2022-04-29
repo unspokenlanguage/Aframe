@@ -31,14 +31,8 @@
                     gps-entity-place="latitude: 39.128080; longitude: -77.243181;"
                 ></a-entity>
 
-            <a-camera gps-camera rotation-reader></a-camera>
+            <a-camera id='camera1' look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1' gps-camera='gpsMinDistance: 0' gps-camera rotation-reader></a-camera>
         </a-scene>
-        <script>
-            // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
-            const sceneEl = document.querySelector('a-scene');
-            sceneEl.addEventListener('loaded', () => {
-              sceneEl.camera = new THREE.PerspectiveCamera();
-            });
-          </script>
+
     </body>
 </html>
